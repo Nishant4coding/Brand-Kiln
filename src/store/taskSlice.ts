@@ -1,27 +1,29 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Task } from '../types/task';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Task } from "../types/task";
 
 interface TaskState {
   tasks: Task[];
-  filter: 'all' | 'completed' | 'pending' | 'overdue';
+  filter: "all" | "completed" | "pending" | "overdue";
   searchQuery: string;
 }
 
 const initialState: TaskState = {
   tasks: [],
-  filter: 'all',
-  searchQuery: '',
+  filter: "all",
+  searchQuery: "",
 };
 
 const taskSlice = createSlice({
-  name: 'tasks',
+  name: "tasks",
   initialState,
   reducers: {
     addTask: (state, action: PayloadAction<Task>) => {
       state.tasks.push(action.payload);
     },
     editTask: (state, action: PayloadAction<Task>) => {
-      const index = state.tasks.findIndex((task) => task.id === action.payload.id);
+      const index = state.tasks.findIndex(
+        (task) => task.id === action.payload.id
+      );
       if (index !== -1) {
         state.tasks[index] = action.payload;
       }
@@ -35,7 +37,7 @@ const taskSlice = createSlice({
         task.completed = !task.completed;
       }
     },
-    setFilter: (state, action: PayloadAction<TaskState['filter']>) => {
+    setFilter: (state, action: PayloadAction<TaskState["filter"]>) => {
       state.filter = action.payload;
     },
     setSearchQuery: (state, action: PayloadAction<string>) => {

@@ -94,7 +94,7 @@ export function TaskItem({ task }: TaskItemProps) {
   return (
     <div
       className={`bg-white p-4 rounded-lg shadow ${
-        task.completed ? 'opacity-75' : ''
+        task.completed ? "opacity-75" : ""
       }`}
     >
       <div className="flex items-start justify-between">
@@ -102,19 +102,15 @@ export function TaskItem({ task }: TaskItemProps) {
           <button
             onClick={() => dispatch(toggleTaskCompletion(task.id))}
             className={`mt-1 ${
-              task.completed ? 'text-green-500' : 'text-gray-400'
+              task.completed ? "text-green-500" : "text-gray-400"
             }`}
           >
-            {task.completed ? (
-              <CheckCircle size={20} />
-            ) : (
-              <Circle size={20} />
-            )}
+            {task.completed ? <CheckCircle size={20} /> : <Circle size={20} />}
           </button>
           <div>
             <h3
               className={`font-medium ${
-                task.completed ? 'line-through text-gray-500' : 'text-gray-900'
+                task.completed ? "line-through text-gray-500" : "text-gray-900"
               }`}
             >
               {task.title}
@@ -122,14 +118,14 @@ export function TaskItem({ task }: TaskItemProps) {
             <p className="text-gray-600 text-sm mt-1">{task.description}</p>
             <div className="flex items-center text-sm text-gray-500 mt-2">
               <Calendar size={14} className="mr-1" />
-              {format(parseISO(task.dueDate), 'MMM d, yyyy')}
+              {format(parseISO(task.dueDate), "MMM d, yyyy")}
             </div>
           </div>
         </div>
         <div className="flex space-x-2">
           <button
             onClick={() => setIsEditing(true)}
-            className="p-2 text-blue-600 hover:text-blue-800"
+            className="p-2 text-[#6d009a] hover:text-[#6d009a]"
           >
             <Edit size={16} />
           </button>

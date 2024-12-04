@@ -8,17 +8,17 @@ function TasksPage() {
   const [showAddTask, setShowAddTask] = useState(false);
 
   return (
-    <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="w-full mx-auto p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center space-x-3">
-          <ListTodo size={32} className="text-blue-600" />
+          <ListTodo size={32} className="text-[#6d009a]" />
           <h1 className="text-2xl font-bold text-gray-900">
             Task Management Dashboard
           </h1>
         </div>
         <button
           onClick={() => setShowAddTask(true)}
-          className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center px-4 py-2 bg-[#6d009a] text-white rounded-lg hover:bg-[#6d009a] transition-colors"
         >
           <Plus size={20} className="mr-2" />
           Add Task

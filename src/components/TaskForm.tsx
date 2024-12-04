@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addTask } from '../store/taskSlice';
-import { Plus, X } from 'lucide-react';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTask } from "../store/taskSlice";
+import { Plus, X } from "lucide-react";
 
 interface TaskFormProps {
   onClose: () => void;
@@ -9,9 +9,9 @@ interface TaskFormProps {
 
 export function TaskForm({ onClose }: TaskFormProps) {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [dueDate, setDueDate] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,7 +52,7 @@ export function TaskForm({ onClose }: TaskFormProps) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#6d009a] focus:ring-[#6d009a]"
                 required
               />
             </div>
@@ -63,7 +63,7 @@ export function TaskForm({ onClose }: TaskFormProps) {
               <textarea
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#6d009a] focus:ring-[#6d009a]"
                 rows={3}
               />
             </div>
@@ -75,7 +75,7 @@ export function TaskForm({ onClose }: TaskFormProps) {
                 type="date"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#6d009a] focus:ring-[#6d009a]"
                 required
               />
             </div>
@@ -90,7 +90,7 @@ export function TaskForm({ onClose }: TaskFormProps) {
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 flex items-center"
+              className="px-4 py-2 text-sm font-medium text-white bg-[#6d009a] rounded-md hover:bg-[#6d009a] flex items-center"
             >
               <Plus size={16} className="mr-2" />
               Add Task
