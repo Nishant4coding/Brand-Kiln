@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { navigation } from "../constants";
 import { HamburgerMenu } from "./ui/Header";
 import MenuSvg from "./ui/MenuSvg";
+import logo from "./assets/logo.png";
 
 const Navbar = () => {
   const pathname = useLocation();
@@ -58,7 +59,7 @@ const Navbar = () => {
           to="/"
         >
           <img
-            src="/public/logo.png"
+            src={logo}
             width={500}
             height={500}
             alt=""
