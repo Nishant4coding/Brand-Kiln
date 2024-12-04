@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter, setSearchQuery } from "../store/taskSlice";
 import { RootState } from "../store/store";

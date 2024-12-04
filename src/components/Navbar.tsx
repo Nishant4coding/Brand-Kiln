@@ -95,10 +95,10 @@ const Navbar = () => {
         </nav>
 
         <Link
-          to={"/contact"}
-          className="hidden lg:flex p-2 px-6 text-[1rem] text-white font-bold uppercase bg-custom-dark   rounded-full"
+          to={"/task"}
+          className="hidden lg:flex p-2 px-6 text-[1rem] text-white font-bold uppercase bg-[#6d009a]   rounded-full"
         >
-          Contact Us
+          Create Task
         </Link>
 
         <button className="ml-auto lg:hidden" onClick={toggleNavigation}>
