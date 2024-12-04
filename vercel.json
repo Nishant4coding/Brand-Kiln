@@ -3,6 +3,7 @@
     { "src": "/docs", "dest": "/" },
     { "src": "/dashboard", "dest": "/" },
     { "src": "/task", "dest": "/" },
-    { "src": "/", "dest": "/" }
+    { "src": "/", "dest": "/" },
+    { "src": "/public/(.*)", "dest": "/" }
   ]
 }
