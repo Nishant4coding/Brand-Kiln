@@ -8,7 +8,7 @@ function TasksPage() {
   const [showAddTask, setShowAddTask] = useState(false);
 
   return (
-    <div className="w-full mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="w-[90%] mx-auto p-4 sm:p-6 lg:p-8 ">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center space-x-3">
           <ListTodo size={32} className="text-[#6d009a]" />
